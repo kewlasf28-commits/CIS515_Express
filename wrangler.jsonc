@@ -1,0 +1,6 @@
+  {
+  "name": "cis515-express",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-18",
+  "compatibility_flags": ["nodejs_compat"]
+}
