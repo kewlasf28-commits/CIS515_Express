@@ -2,5 +2,12 @@
   "name": "cis515-express",
   "main": "worker.js",
   "compatibility_date": "2026-10-18",
-  "compatibility_flags": ["nodejs_compat"]
-}
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [
+  {
+    "type": "Text",
+    "globs": ["**/*.ejs"],
+    "fallthrough": true
+  }
+]
+} 
