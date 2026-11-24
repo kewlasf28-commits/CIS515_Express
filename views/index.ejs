@@ -40,9 +40,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active"
-                           aria-current="page"
-                           href="/">Home</a>
+                        <a class="nav-link active" href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -53,6 +51,36 @@
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
 
+                    <% if (user) { %>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">
+                                Logout
+                            </a>
+                        </li>
+
+                    <% } else { %>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">
+                                Register
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">
+                                Login
+                            </a>
+                        </li>
+
+                    <% } %>
+
                 </ul>
             </div>
         </div>
@@ -60,6 +88,13 @@
 
     <!-- Main Content -->
     <main class="container my-5">
+
+        <!-- Login and Logout Messages -->
+        <% if (message && message.trim() !== "") { %>
+            <div class="alert alert-success text-center">
+                <%= message %>
+            </div>
+        <% } %>
 
         <div class="text-center mb-5">
             <h1>Welcome to My Portfolio!</h1>
@@ -98,6 +133,13 @@
                     functionality. This allows my website to
                     receive and process information from visitors
                     through a contact form.
+                </p>
+
+                <p>
+                    My website now includes user registration,
+                    password hashing, login authentication,
+                    session management, and a protected user
+                    dashboard connected to MongoDB.
                 </p>
 
                 <p>
@@ -165,6 +207,41 @@
                 </div>
 
             </div>
+        </section>
+
+        <!-- Account Section -->
+        <section class="text-center bg-light p-4 rounded mb-5">
+
+            <% if (user) { %>
+
+                <h2>Welcome, <%= user.username %>!</h2>
+
+                <p>Access your personal dashboard below.</p>
+
+                <a href="/dashboard" class="btn btn-primary">
+                    View Dashboard
+                </a>
+
+                <a href="/logout" class="btn btn-danger">
+                    Log Out
+                </a>
+
+            <% } else { %>
+
+                <h2>Create Your Account</h2>
+
+                <p>Register or log in to access your dashboard.</p>
+
+                <a href="/register" class="btn btn-primary">
+                    Register
+                </a>
+
+                <a href="/login" class="btn btn-success">
+                    Log In
+                </a>
+
+            <% } %>
+
         </section>
 
         <!-- Contact Section -->
