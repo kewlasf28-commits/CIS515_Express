@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<main class="container mt-4">
+    <h2>Welcome Back!</h2>
+    <p>Log in to access your dashboard.</p>
+
+    <% if (message && message !== "") { %>
+        <div class="alert <%= message.includes('success') ? 'alert-success' : 'alert-danger' %>">
+            <%= message %>
+        </div>
+    <% } %>
+
+    <form action="/login" method="POST">
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+            >
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+            >
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Log In
+        </button>
+
+    </form>
+
+    <p class="mt-3">
+        Don't have an account?
+        <a href="/register">Register Here</a>
+    </p>
+</main>
+
+<%- include('partials/footer') %>

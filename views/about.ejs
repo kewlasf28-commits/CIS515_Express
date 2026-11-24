@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Allison's Portfolio | Home</title>
+    <title>Allison's Portfolio | About Me</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -22,7 +22,10 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/">Allison's Portfolio</a>
+
+            <a class="navbar-brand" href="/">
+                Allison's Portfolio
+            </a>
 
             <button
                 class="navbar-toggler"
@@ -40,39 +43,52 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link"
-                           href="/">Home</a>
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active
-                        aria-current="page " href="/about">About</a>
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="/about"
+                        >
+                            About
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/contact">
+                            Contact
+                        </a>
                     </li>
 
                 </ul>
             </div>
+
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="container my-5">
 
-        <div class="text-center mb-5">
-            <h1>Welcome to My Portfolio</h1>
+        <!-- About Me Heading -->
+        <section class="text-center mb-5">
+
+            <h1>About Me</h1>
 
             <p class="lead">
-                This website showcases my projects,
-                technical skills, and progress as a
-                student at Des Moines Area Community College.
+                Welcome! I'm a student at Des Moines Area
+                Community College studying web development
+                and programming.
             </p>
-        </div>
 
-        <!-- About Section -->
+        </section>
+
+        <!-- Web Development Journey -->
         <section class="row mb-5">
+
             <div class="col-md-8 mx-auto">
 
                 <h2>My Web Development Journey</h2>
@@ -109,72 +125,56 @@
                 </p>
 
             </div>
+
         </section>
 
-        <!-- Project Cards -->
-        <section class="mb-5">
+        <!-- Skills Section -->
+        <section class="row mb-5">
 
-            <h2 class="text-center mb-4">My Projects</h2>
+            <div class="col-md-8 mx-auto">
 
-            <div class="row g-4">
+                <h2>Skills I'm Learning</h2>
 
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
+                <ul class="list-group">
 
-                            <h3 class="card-title h5">
-                                Foundational Website
-                            </h3>
+                    <li class="list-group-item">
+                        HTML5 and semantic webpage structure
+                    </li>
 
-                            <p class="card-text">
-                                My foundational website demonstrates
-                                HTML, CSS, Bootstrap, responsive design,
-                                and website navigation.
-                            </p>
+                    <li class="list-group-item">
+                        CSS3 and responsive web design
+                    </li>
 
-                            <a href="/about"
-                               class="btn btn-primary">
-                                Learn More
-                            </a>
+                    <li class="list-group-item">
+                        Bootstrap layouts and components
+                    </li>
 
-                        </div>
-                    </div>
-                </div>
+                    <li class="list-group-item">
+                        JavaScript programming
+                    </li>
 
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
+                    <li class="list-group-item">
+                        Node.js and Express.js
+                    </li>
 
-                            <h3 class="card-title h5">
-                                Hire Me Dashboard
-                            </h3>
+                    <li class="list-group-item">
+                        Git and GitHub version control
+                    </li>
 
-                            <p class="card-text">
-                                My Hire Me Dashboard helps organize
-                                job applications and track progress
-                                through different application stages.
-                            </p>
-
-                            <a href="/contact"
-                               class="btn btn-success">
-                                Contact Me
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
+                </ul>
 
             </div>
+
         </section>
 
         <!-- Contact Section -->
         <section class="text-center bg-light p-5 rounded">
 
-            <h2>Get in Touch!</h2>
+            <h2>Let's Connect!</h2>
 
             <p>
-                Have a question or want to learn more
-                about my projects?
+                Want to learn more about my projects
+                or get in touch?
                 Visit my contact page.
             </p>
 
@@ -188,10 +188,12 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
+
         <p class="mb-0">
             &copy; 2026 Allison's Portfolio |
             CIS 515 - Web Development
         </p>
+
     </footer>
 
     <!-- Bootstrap JavaScript -->
@@ -201,6 +203,3 @@
 
 </body>
 </html>
-app.get('/about', (req, res) => {
-    res.render('about');
-});
